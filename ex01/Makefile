@@ -1,5 +1,5 @@
 NAME = zombie
-SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SRCS = main.cpp Zombie.cpp zombieHorde.cpp
 OBJS = $(SRCS:.cpp=.o)
 OBJDIR = ./objs
 OBJ_PATHS = $(addprefix $(OBJDIR)/, $(OBJS))
