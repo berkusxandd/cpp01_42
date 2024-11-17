@@ -25,6 +25,8 @@ int main(int ac, char **av)
 	std::string str1 = av[2];
 	std::string str2 = av[3];
 	std::string line;
+	if (str1.empty())
+		return 0;
 	filename = av[1];
 	std::ifstream in(filename.c_str());
 	std::ofstream out((filename + ".replace").c_str());

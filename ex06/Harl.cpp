@@ -20,29 +20,38 @@ void	Harl::error(void)
 	std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
 }
 
-void Harl::complain(std::string level)
+void Harl::complain(std::string filter)
 {
-	void (Harl::*levelFuncs[])() = 
-	{
-		&Harl::debug,
-		&Harl::error,
-		&Harl::info,
-		&Harl::warning
-	};
 	std::string levelTitles[] = 
 	{
-		"debug",
-		"error",
-		"info",
-		"warning"
+		"DEBUG",
+		"INFO",
+		"WARNING",
+		"ERROR"
 	};
+	int level = -1;
 	for (int i = 0; i < 4; i++)
 	{
-		if (levelTitles[i] == level)
+		if (levelTitles[i] == filter)
 		{
-			(this->*levelFuncs[i])();
+			level = i;
 			break;
 		}
+	}
+	// HERE THERE IS FALL THROUGH ERROR (-Wall)
+	switch (level)
+	{
+	case 0:
+		this->debug();
+	case 1:
+		this->info();
+	case 2:
+		this->warning();
+	case 3:
+		this->error();
+		break;
+	default:
+		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 	}
 }
 

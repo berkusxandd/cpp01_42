@@ -1,4 +1,4 @@
-NAME = harl
+NAME = harlFilter
 SRCS = main.cpp Harl.cpp
 OBJS = $(SRCS:.cpp=.o)
 OBJDIR = ./objs
