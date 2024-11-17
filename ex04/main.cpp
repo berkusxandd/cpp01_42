@@ -15,6 +15,7 @@ void replace(std::string &line, std::string str1, std::string str2)
 
 int main(int ac, char **av)
 {
+	//ADD PROTECTION IF STR1 OR 2 IS EMPTY
 	if (ac != 4)
 	{
 		std::cout << "usage: ./replace file str1 str2" << std::endl;
