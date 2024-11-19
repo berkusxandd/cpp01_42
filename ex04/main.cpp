@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bince < bince@student.42.fr>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/19 19:19:20 by bince             #+#    #+#             */
+/*   Updated: 2024/11/19 19:19:24 by bince            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -15,7 +27,6 @@ void replace(std::string &line, std::string str1, std::string str2)
 
 int main(int ac, char **av)
 {
-	//ADD PROTECTION IF STR1 OR 2 IS EMPTY
 	if (ac != 4)
 	{
 		std::cout << "usage: ./replace file str1 str2" << std::endl;
